@@ -7,7 +7,7 @@ class River
   end
 
   def fish_taken
-    return "No fish left!" if @fishes.count == 0
+    # return "No fish left!" if @fishes.count == 0
     @fishes.pop
   end
 
