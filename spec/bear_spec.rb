@@ -6,8 +6,8 @@ require_relative('../fish')
 class TestBear < MiniTest::Test
 
   def setup
-    fish01 = Fish.new("salmon")
-    fish02 = Fish.new("trout")
+    fish01 = Fish.new("wanda")
+    fish02 = Fish.new("nemo")
     fishes = [fish01, fish02]
     river01 = River.new("forth", fishes)
     @bear01 = Bear.new("yogi", river01)
@@ -24,7 +24,7 @@ class TestBear < MiniTest::Test
   def test_take_fish
     @bear01.take_fish
     @bear01.take_fish
-    assert_equal("salmon", @bear01.stomach[1].name)
+    assert_equal("nemo", @bear01.stomach[0].name)
   end
 
   def test_food_count
